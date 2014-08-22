@@ -12,17 +12,18 @@ origdata <- LoadAcsesData(filename,location)
 
 # PROCESS DATA
 uu <- origdata %>%
-  filter(Gender!='Total' & Civil.Service.grad=='Total' & Wage.band=='Total') %>%
+  filter(Gender=='Total' & Civil.Service.grad=='Total' & Wage.band=='Total') %>%
+  filter(Date=='2010' | Date=='2013') %>%
   AddOrgData(whitehallonly) %>%
-  select(Age.band,Group,Gender,count,Date) %>%
+  select(Age.band,Group,count,Whitehall,Managed,Include,Date) %>%
   filter(Age.band!='Total') %>%
   group_by(Group, Date) %>%
   mutate(total=sum(count, na.rm=TRUE)) %>%
   ungroup() %>%
   RelabelAgebands() %>%
-  group_by(Group,Date, Age.band, Gender) %>%
+  group_by(Group,Date, Age.band) %>%
   summarise(count=sum(count,na.rm=TRUE), total=mean(total,na.rm=TRUE)) %>%
-  filter(Age.band!='Unknown age' & Date=='2013') %>%
+  filter(Age.band!='Unknown age') %>%
   mutate(share=count/total) %>%
   ungroup() %>%
   mutate(Age.band = factor(Age.band))
@@ -30,9 +31,9 @@ uu <- origdata %>%
 # CREATE WHITEHALL TOTAL IF NEEDED
 if(whitehallonly) {
   whtotal <- uu %>% 
-    group_by(Date,Age.band,Gender) %>%
+    group_by(Date,Age.band) %>%
     filter(Group!='Whole Civil Service') %>%
-    summarise(count=sum(count), total=sum(total), share=count/total) %>%
+    summarise(count=sum(count),total=sum(total), share=count/total) %>%
     mutate(Group = 'Whitehall')
   uu <- rbind(uu[uu$Group!='Whole Civil Service',],whtotal)
 }
@@ -50,8 +51,8 @@ uu <- uu %>%
   mutate(Group=reorder(Group,sorter,mean),
          totalgroup = ifelse(Group=='Whole Civil Service' | Group=='Whitehall', 
                              TRUE, FALSE),
-         share = ifelse(Gender=='Female', -share, share)) %>%
-  arrange(Group, Age.band, Gender, Date)
+         share = ifelse(Date=='2010', -share, share)) %>%
+  arrange(Group, Age.band, Date)
 
 # Build plot --------------------------------------------------------------
 
@@ -80,12 +81,12 @@ ylabels <- paste0(abs(ybreaks*100),'%')
 
 plot_AgeDeGe <- ggplot(uu, aes(x=Age.band, y=yvar)) +
   geom_rect(data = uu[uu$totalgroup,],fill=HLcol,xmin = -Inf,xmax = Inf,
-            ymin = -Inf,ymax = Inf,alpha = .01) +
+            ymin = -Inf,ymax = Inf,alpha = .05) +
   geom_rect(data = uu[uu$totalgroup,],colour=HLcol,xmin = -Inf,xmax = Inf,
             ymin = -Inf,ymax = Inf,alpha = 1,fill=NA,size=1) +
-  geom_bar(position='identity', width=1, aes(fill=Gender),stat='identity') +
-  scale_fill_manual(values=c('Female'=ifgcolours[2,1],'Male'=ifgcolours[5,1]),
-                    labels=c('Female   ', 'Male')) +
+  geom_bar(position='identity', width=1, aes(fill=factor(Date)),stat='identity') +
+  scale_fill_manual(values=c('2010'=ifgcolours[2,1],'2013'=ifgcolours[5,1]),
+                    labels=c('2010   ', '2013')) +
   guides(col=guide_legend(ncol=3)) +
   scale_y_continuous(labels=ylabels,breaks=ybreaks,limits=ylimits) +
   facet_wrap(~Group, nrow=3) +

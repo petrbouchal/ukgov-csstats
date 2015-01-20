@@ -6,7 +6,7 @@ This is a handover note for R code contained in this repo, which was used to pro
 
 The latest data and analysis will continue to appear on http://www.instituteforgovernment.org.uk/publication/civil-service-workforce
 
-Readme written by [@petrbouchal](http://github.com/petrbouchal) in January 2015.
+Readme written by [@petrbouchal](http://github.com/petrbouchal) in January 2015
 
 ## Structure
 
@@ -65,7 +65,7 @@ Involves
 
 **3. Creating charts**
 
-- uses [`ggplot2`](http://github.com/hadley/ggplot2), a custom theme from `pbtools`
+- uses [`ggplot2`](http://github.com/hadley/ggplot2) and a custom theme from `pbtools`
 
 **4. Saving charts**
 

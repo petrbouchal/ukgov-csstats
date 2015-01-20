@@ -1,6 +1,8 @@
 # source('./lib/load_packages.R') now done through pbtools
 
-whmdatafolder <- 'P:/Research & Learning/Research/19. Transforming Whitehall/Whitehall Monitor/Data Sources/'
+whmdatafolder <- 'P:/Research & Learning/Research/Whitehall Monitor/Data/Staff Stats Annual/Nomis ACSES/2008-14/'
+macdatafolder <- '/Users/petrbouchal/Downloads/ACSES/'
+orgdatapath <- './data-input/acses_orgs_fordatafrom2008to2014_managedbounds.csv'
 
 # Set location ------------------------------------------------------------
 if(whatplatform()=='Darwin') {location='home'} else {location='ifg'}
@@ -31,7 +33,7 @@ source('./lib/RelabelAgebands.R')
 source('./lib/RelabelPaybands.R')
 source('./lib/RelabelGrades.R')
 
-yearlabels <- c('2008','2009','2010\nSR10 baseline','2011','2012','2013')
+yearlabels <- c('2008','2009','2010\nSR10 baseline','2011','2012','2013','2014')
 
 ## THESE ARE NOW IN PBTOOLS:
 # source('./lib/GetColorTable.R')

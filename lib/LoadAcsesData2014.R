@@ -2,9 +2,9 @@
 
 LoadAcsesData2014 <- function (file_name, location='ifg') {
   if(location=='home') {
-    directory  <- '/Users/petrbouchal/Downloads/ACSES/'
+    directory  <- macdatafolder
   } else if(location=='ifg') {
-    directory  <- 'P:/Research & Learning/Research/19. Transforming Whitehall/Whitehall Monitor/Data Sources/ONS Civil Service Statistics/Nomis ACSES/2008-14/'
+    directory  <- whmdatafolder
   } else {
     directory <- location
   }

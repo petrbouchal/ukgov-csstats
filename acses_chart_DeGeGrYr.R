@@ -1,5 +1,5 @@
 library(pbtools)
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 library(plyr)
 
 if(!batchproduce){ # avoid overriding when batch charting

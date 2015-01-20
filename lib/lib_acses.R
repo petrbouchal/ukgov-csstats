@@ -1,4 +1,4 @@
-# source('./src/lib/load_packages.R')
+# source('./lib/load_packages.R') now done through pbtools
 
 whmdatafolder <- 'P:/Research & Learning/Research/19. Transforming Whitehall/Whitehall Monitor/Data Sources/'
 
@@ -24,18 +24,18 @@ if(location=='ifg') {
   loadfonts(device='win',quiet=TRUE)
 }
 
-source('./src/lib/AddOrgData.R')
-source('./src/lib/LoadAcsesData.R')
-source('./src/lib/LoadAcsesData2014.R')
-source('./src/lib/RelabelAgebands.R')
-source('./src/lib/RelabelPaybands.R')
-source('./src/lib/RelabelGrades.R')
+source('./lib/AddOrgData.R')
+source('./lib/LoadAcsesData.R')
+source('./lib/LoadAcsesData2014.R')
+source('./lib/RelabelAgebands.R')
+source('./lib/RelabelPaybands.R')
+source('./lib/RelabelGrades.R')
 
 yearlabels <- c('2008','2009','2010\nSR10 baseline','2011','2012','2013')
 
 ## THESE ARE NOW IN PBTOOLS:
-# source('./src/lib/GetColorTable.R')
-# source('./src/lib/TintShade.R')
-# source('./src/lib/SavePlot.R')
-# source('./src/lib/SortGroups.R')
-# source('./src/lib/rgb2col.R')
+# source('./lib/GetColorTable.R')
+# source('./lib/TintShade.R')
+# source('./lib/SavePlot.R')
+# source('./lib/SortGroups.R')
+# source('./lib/rgb2col.R')

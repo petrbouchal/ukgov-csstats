@@ -1,5 +1,5 @@
 library(pbtools)
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 
 origdata <- LoadAcsesData2014('ACSES_Gender_Dept_Age_Grade_data.tsv',location='ifg')
 

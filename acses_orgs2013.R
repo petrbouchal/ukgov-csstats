@@ -1,4 +1,4 @@
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 
 filename <- 'ACSES_Gender_Dept_Ethn_Grade_Pay_data.tsv'
 origdata <- LoadAcsesData(filename,location)

@@ -1,4 +1,4 @@
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 library(pbtools)
 library(plyr)
 

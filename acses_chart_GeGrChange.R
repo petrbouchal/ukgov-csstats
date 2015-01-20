@@ -1,4 +1,4 @@
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 
 uu <- read.csv('./data-input/GenderGrade_2013.csv')
 uu <- melt(uu)

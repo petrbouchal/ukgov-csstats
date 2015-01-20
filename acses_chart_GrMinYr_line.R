@@ -1,5 +1,5 @@
 library(plyr)
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 library(pbtools)
 
 # Load data ---------------------------------------------------------------

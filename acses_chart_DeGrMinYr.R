@@ -1,6 +1,6 @@
 library(plyr)
 library(pbtools)
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 
 if(!batchproduce) { # don't override global when 
   whitehallonly <- TRUE # use to override global in lib

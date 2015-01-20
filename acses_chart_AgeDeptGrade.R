@@ -1,7 +1,7 @@
 ##### Prep -----------------------
 
 library(pbtools)
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 
 #### Load data -------------
 

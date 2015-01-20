@@ -1,4 +1,4 @@
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 origdata <- LoadAcsesData('ACSES_Gender_Dept_Age_Grade_data.tsv',location)
 
 # Process data ------------------------------------------------------------

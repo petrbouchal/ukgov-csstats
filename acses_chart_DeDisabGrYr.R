@@ -1,4 +1,4 @@
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 if(!batchproduce) {
   whitehallonly <- FALSE
 } 

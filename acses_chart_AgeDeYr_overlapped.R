@@ -1,6 +1,6 @@
 library(plyr)
 library(pbtools)
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 if (!batchproduce) {
   whitehallonly <- TRUE # uncomment line to override global WH-only set in lib
 }

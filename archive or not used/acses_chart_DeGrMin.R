@@ -1,4 +1,4 @@
-source('./src/lib/lib_acses.R')
+source('./lib_acses.R')
 
 # Load data ---------------------------------------------------------------
 

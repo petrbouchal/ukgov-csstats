@@ -1,6 +1,6 @@
 # This code takes 2012-8 data and adds 2013 data to it
 
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 
 listofcharts <- c('AgeDeGe','AgeYr','DeDisabGrYr',
                   'DeGeGr','DeGeGrYr','DeGePay','DeGrMin',

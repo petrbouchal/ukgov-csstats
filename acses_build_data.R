@@ -1,5 +1,5 @@
 # Setup -------------------------------------------------------------------
-source('./src/lib/lib_acses.R')
+source('./lib/lib_acses.R')
 
 listofdatafiles <- c('ACSES_Gender_Dept_Age_Grade',
                      'ACSES_Gender_Dept_Grade_Pay',

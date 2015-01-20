@@ -4,7 +4,9 @@ Analysis of ONS Civil Service Statistics data
 
 This is a handover note for R code contained in this repo, which was used to produce some charts in [Whitehall Monitor 2014](www.instituteforgovernment.org.uk/our-work/whitehall-monitor). Beyond the code, it also serves as a how-to for the ONS Civil Service Statistics data. It's a description of what's where and how it fits together rather than a how-to.
 
-Written by [@petrbouchal](http://github.com/petrbouchal) in January 2015.
+The latest data and analysis will continue to appear on http://www.instituteforgovernment.org.uk/publication/civil-service-workforce
+
+Readme written by [@petrbouchal](http://github.com/petrbouchal) in January 2015.
 
 ## Structure
 

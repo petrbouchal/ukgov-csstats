@@ -1,4 +1,5 @@
-# ukgov-csstats
+ONS Civil Service Statistics analysis and visualisation
+=====================
 Analysis of ONS Civil Service Statistics data
 
 This is a handover note for R code contained in this repo, which was used to produce some charts in [Whitehall Monitor 2014](www.instituteforgovernment.org.uk/our-work/whitehall-monitor). Beyond the code, it also serves as a how-to for the ONS Civil Service Statistics data. It's a description of what's where and how it fits together rather than a how-to.
